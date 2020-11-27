@@ -2,6 +2,7 @@ import CountBy from './components/CountBy';
 import EvenClicks from './components/EvenClicks';
 import Multiplier from './components/Multiplier';
 import HideMe from './components/HideMe';
+import MinimumLength from './components/MinimumLength';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <EvenClicks />
       <CountBy step={ 5 } />
       <HideMe>Blah blah blah</HideMe>
+      <MinimumLength length={ 30 } />
     </div>
   );
 }
