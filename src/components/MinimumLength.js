@@ -1,5 +1,7 @@
 import { Component } from "react";
 
+import Form from 'react-bootstrap/Form';
+
 class MinimumLength extends Component {
     constructor(props) {
         super(props);
@@ -21,28 +23,19 @@ class MinimumLength extends Component {
         const state = input.length >= lengthMin ? "none" : "block";
 
         return (
-            <form>
-                <div className="form-group">
-                    <label for="text"> { lengthMin } character length test</label>
-                    <input
-                        type="text"
-                        id="text"
-                        placeholder="go on type summin"
-                        value={input}
-                        className="form-control"
-                        onChange={ this.handleChange }
-                    />
-                    <small 
-                        id="text" 
-                        className="form-text text-muted"
+            <Form>
+                <Form.Group controlId="text">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="text" placeholder="go on type summin" onChange={ this.handleChange } />
+                    <Form.Text 
+                        className="text-muted" 
                         style = {{
                             display: state,
-                        }}
-                    >
+                        }}>
                         Too short!
-                    </small>
-                </div>
-            </form>
+                    </Form.Text>
+                </Form.Group>
+            </Form>
         );
     }
 

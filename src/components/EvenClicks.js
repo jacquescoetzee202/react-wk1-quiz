@@ -1,5 +1,7 @@
 import { Component } from "react";
 
+import Button from 'react-bootstrap/Button';
+
 class EvenClicks extends Component {
     constructor() {
         super();
@@ -20,13 +22,13 @@ class EvenClicks extends Component {
         const currentClicks = this.state.clicks;
         const state = currentClicks % 2 === 0 && currentClicks > 0 ? "Even" : "Odd";
         return (
-        <button 
-            onClick={ this.handleClick }
-            type="button" 
-            className="btn btn-info"
+
+        <Button 
+            variant="info" 
+            onClick={ this.handleClick } 
         >
             { state }
-        </button>
+        </Button>
         );
     }
 
